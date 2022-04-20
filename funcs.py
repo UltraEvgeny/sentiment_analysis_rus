@@ -9,7 +9,7 @@ def multiclass_roc_auc(y_true, y_pred):
     if len(set(y_true)) == 2:
         r = roc_auc_score(y_true, y_pred[:, 1])
     else:
-        r = roc_auc_score(y_true, y_pred[:, 1], multi_class='ovr')
+        r = roc_auc_score(y_true, y_pred, multi_class='ovr')
     return r
 
 
